@@ -12,7 +12,7 @@ document.getElementById('login-btn')
                 p.innerText = 'Login Successful';
                 p.style.color = 'green';
                 loginList.appendChild(p);
-                window.location.href = '../main.html'
+                window.location.href = 'main.html'
             }
             else {
                 p.innerText = 'Password Incorrect';

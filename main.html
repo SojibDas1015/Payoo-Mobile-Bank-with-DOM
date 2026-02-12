@@ -19,55 +19,124 @@
 </head>
 
 <body class="bg-black">
-    <header class="bg-back max-w-[450px] h-screen mx-auto px-4 py-4">
-        <nav class="flex justify-between items-center mb-3">
-            <div class="flex items-center gap-3">
-                <img class="w-10" src="assets/Group.png" alt="">
-                <div>
-                    <h3 class="font-outfit font-extrabold text-xs">$45000</h3>
-                    <p class="font-outfit font-normal text-xs">Available Balance</p>
+    <header class="bg-back max-w-[450px] min-h-[1000px] mx-auto">
+        <section class="bg-white px-4 py-4 rounded-b-2xl">
+            <nav class="flex justify-between items-center mb-3">
+                <div class="flex items-center gap-3">
+                    <img class="w-10" src="assets/Group.png" alt="">
+                    <div>
+                        <h3 class="font-outfit font-extrabold text-xl">$ <span id="balance">4500</span></h3>
+                        <p class="font-outfit font-normal text-xs">Available Balance</p>
+                    </div>
                 </div>
-            </div>
-            <div class="font-outfit font-normal text-xs">
-                <p class="border-gray-400 border-1 px-2 py-2 rounded-md">Log Out</p>
-            </div>
-        </nav>
-        <hr>
-        <section class="mb-4">
-            <h1 class="font-outfit font-bold text-2xl mt-4 mb-4">🔥 Welcome to Payooo!</h1>
-            <p class="font-outfit font-normal text-xs">Enjoy easy and convenient financial services with us. <br>
-                Cashout charge is low and </p>
+                <div id="log-out-btn" class="font-outfit font-normal text-xs">
+                    <p class="border-gray-400 border-1 px-2 py-2 rounded-md cursor-pointer">Log Out</p>
+                </div>
+            </nav>
+            <hr>
+            <section class="mb-4">
+                <h1 class="font-outfit font-bold text-2xl mt-4 mb-4">🔥 Welcome to Payooo!</h1>
+                <p class="font-outfit font-normal text-xs">Enjoy easy and convenient financial services with us. <br>
+                    Cashout charge is low and </p>
+            </section>
+
+            <section>
+                <div class="grid grid-cols-3 justify-items-center gap-2">
+                    <!-- add money -->
+                    <div id="add-money-btn" class="border-1 w-full flex flex-col items-center rounded-xl py-2 cursor-pointer hover:scale-105 duration-200">
+                        <img class="mx-auto" src="assets/wallet1.png" alt="">
+                        <p>Add Money</p>
+                    </div>
+                    <!-- cash out -->
+                    <div id="cash-out-btn" class="border-1 w-full flex flex-col items-center rounded-xl py-2 cursor-pointer hover:scale-105 duration-200">
+                        <img class="mx-auto" src="assets/send1.png" alt="">
+                        <p>Cash Out</p>
+                    </div>
+                    <div class="border-1 w-full flex flex-col items-center rounded-xl py-2">
+                        <img class="mx-auto" src="assets/money1.png" alt="">
+                        <p>Transfer Money</p>
+                    </div>
+                    <div class="border-1 w-full flex flex-col items-center rounded-xl py-2">
+                        <img class="mx-auto" src="assets/bonus1.png" alt="">
+                        <p>Get Bonus</p>
+                    </div>
+                    <div class="border-1 w-full flex flex-col items-center rounded-xl py-2">
+                        <img class="mx-auto" src="assets/purse1.png" alt="">
+                        <p>Pay Bill</p>
+                    </div>
+                    <div class="border-1 w-full flex flex-col items-center rounded-xl py-2">
+                        <img class="mx-auto" src="assets/transaction1.png" alt="">
+                        <p>Transactions</p>
+                    </div>
+                </div>
+            </section>
+
+
         </section>
 
-        <section>
-            <div class="grid grid-cols-3 justify-items-center gap-2">
-                <div class="border-1 w-full flex flex-col items-center rounded-xl py-3">
-                    <img class="mx-auto" src="assets/wallet1.png" alt="">
-                    <p>Add Money</p>
-                </div>
-                <div class="border-1 w-full flex flex-col items-center rounded-xl py-3">
-                    <img class="mx-auto"  src="assets/send1.png" alt="">
-                    <p>Cash Out</p>
-                </div>
-                <div class="border-1 w-full flex flex-col items-center rounded-xl py-3">
-                    <img class="mx-auto"  src="assets/money1.png" alt="">
-                    <p>Transfer Money</p>
-                </div>
-                <div class="border-1 w-full flex flex-col items-center rounded-xl py-3">
-                    <img class="mx-auto"  src="assets/bonus1.png" alt="">
-                    <p>Get Bonus</p>
-                </div>
-                <div class="border-1 w-full flex flex-col items-center rounded-xl py-3">
-                    <img class="mx-auto"  src="assets/purse1.png" alt="">
-                    <p>Pay Bill</p>
-                </div>
-                <div class="border-1 w-full flex flex-col items-center rounded-xl py-3">
-                    <img class="mx-auto"  src="assets/transaction1.png" alt="">
-                    <p>Transactions</p>
+        <!-- add money -->
+        <section id="add-money-section">
+            <h2 class="font-outfit font-semibold text-xl px-4 mt-4">Add Money</h2>
+            <div class="card bg-base-100 shrink-0 shadow-md rounded-2xl mx-auto mt-4 ml-4 mr-4">
+                <div class="card-body">
+                    <form id="login-list" class="fieldset">
+                        <label class="label font-outfit font-bold text-[13px]">Select A Bank</label>
+                        <select class="select select-ghost border bg-back rounded-full outline-none w-full">
+                            <option class="font-outfit text-[12px] " selected disabled>Select A Bank</option>
+                            <option class="text-[12px]" value="Bkash">Bkash</option>
+                            <option class="text-[12px]" value="Nagat">Nagat</option>
+                            <option class="text-[12px]" value="DBBL">DBBL</option>
+                        </select>
+                        <label class="label font-outfit font-bold text-[13px]">Bank Account Number</label>
+                        <input id="number" type="text"
+                            class="input rounded-full font-bold text-[12px] outline-none w-full bg-back border-none"
+                            placeholder="Enter 11 digit account number" />
+                        <label class="label font-outfit font-bold text-[13px]">Amount to Add</label>
+                        <input id="amount" type="text"
+                            class="input rounded-full font-bold text-[12px] outline-none w-full bg-back border-none"
+                            placeholder="Add Amount to withdraw" />
+                        <label class="label font-outfit font-bold text-[13px]">Pin Number</label>
+                        <input id="pin" type="password"
+                            class="input rounded-full font-bold text-[12px] outline-none w-full bg-back border-none"
+                            placeholder="Enter 4 digit pin number" />
+                    </form>
+                    <button id="add-money" class="btn bg-login text-white mt-4 rounded-full text-xl font-semibold">Add
+                        Money</button>
                 </div>
             </div>
         </section>
+
+        <!-- cash out -->
+        <section id="cash-out-section">
+            <h2 class="font-outfit font-semibold text-xl px-4 mt-4">Cash Out</h2>
+            <section class="">
+                <div class="card bg-base-100 shrink-0 shadow-md rounded-2xl mx-auto mt-4 ml-4 mr-4">
+                    <div class="card-body">
+                        <form id="login-list-cash-out" class="fieldset">
+                            <label class="label font-outfit font-bold text-[13px]">Agent Number</label>
+                            <input id="number" type="text"
+                                class="input rounded-full font-bold text-[12px] outline-none w-full bg-back border-none"
+                                placeholder="Enter 11 digit account number" />
+                            <label class="label font-outfit font-bold text-[13px]">Amount</label>
+                            <input id="cash-out-amount" type="text"
+                                class="input rounded-full font-bold text-[12px] outline-none w-full bg-back border-none"
+                                placeholder="Add Amount to withdraw" />
+                            <label class="label font-outfit font-bold text-[13px]">Pin Number</label>
+                            <input id="cash-out-pin" type="password"
+                                class="input rounded-full font-bold text-[12px] outline-none w-full bg-back border-none"
+                                placeholder="Enter 4 digit pin number" />
+                        </form>
+                        <button id="cash-out"
+                            class="btn bg-login text-white mt-4 rounded-full text-xl font-semibold">Withdraw Money</button>
+                    </div>
+                </div>
+            </section>
+        </section>
     </header>
+
+    <script src="script/addmony.js"></script>
+    <script src="script/toggole.js"></script>
+    <script src="script/cashout.js"></script>
 </body>
 
 </html>
