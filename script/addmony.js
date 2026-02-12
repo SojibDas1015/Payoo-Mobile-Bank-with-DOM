@@ -6,7 +6,7 @@ document.getElementById('add-money')
         const p = document.createElement('p');
         const balance = parseInt(document.getElementById('balance').innerText);
         const totalBalace = amount + balance;
-        if (pin === 123) {
+        if (pin === 1234) {
             p.innerText = 'Add Money Successful';
             p.style.color = 'green';
             loginList.appendChild(p);

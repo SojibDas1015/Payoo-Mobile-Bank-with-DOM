@@ -7,7 +7,7 @@ document.getElementById('cash-out')
         const balance = parseInt(document.getElementById('balance').innerText);
         const cashOutTotal = balance - cashOutAmount;
         console.log(cashOutTotal)
-        if (cashOutPin === 123) {
+        if (cashOutPin === 1234) {
             p.innerText = 'Cash Out Successful';
             p.style.color = 'green';
             loginList.appendChild(p);
