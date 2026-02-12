@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main </title>
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Daisy Ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <style type="text/tailwindcss">
+        @theme {
+        --font-outfit: "Outfit", sans-serif;
+        --color-back: #F4F5F7;
+        --color-login: #0874F2;
+      }
+    </style>
+</head>
+
+<body class="bg-black">
+    <header class="bg-back max-w-[450px] h-screen mx-auto px-4 py-4">
+        <nav class="flex justify-between items-center mb-3">
+            <div class="flex items-center gap-3">
+                <img class="w-10" src="assets/Group.png" alt="">
+                <div>
+                    <h3 class="font-outfit font-extrabold text-xs">$45000</h3>
+                    <p class="font-outfit font-normal text-xs">Available Balance</p>
+                </div>
+            </div>
+            <div class="font-outfit font-normal text-xs">
+                <p class="border-gray-400 border-1 px-2 py-2 rounded-md">Log Out</p>
+            </div>
+        </nav>
+        <hr>
+        <section class="mb-4">
+            <h1 class="font-outfit font-bold text-2xl mt-4 mb-4">🔥 Welcome to Payooo!</h1>
+            <p class="font-outfit font-normal text-xs">Enjoy easy and convenient financial services with us. <br>
+                Cashout charge is low and </p>
+        </section>
+
+        <section>
+            <div class="grid grid-cols-3 justify-items-center gap-2">
+                <div class="border-1 w-full flex flex-col items-center rounded-xl py-3">
+                    <img class="mx-auto" src="assets/wallet1.png" alt="">
+                    <p>Add Money</p>
+                </div>
+                <div class="border-1 w-full flex flex-col items-center rounded-xl py-3">
+                    <img class="mx-auto"  src="assets/send1.png" alt="">
+                    <p>Cash Out</p>
+                </div>
+                <div class="border-1 w-full flex flex-col items-center rounded-xl py-3">
+                    <img class="mx-auto"  src="assets/money1.png" alt="">
+                    <p>Transfer Money</p>
+                </div>
+                <div class="border-1 w-full flex flex-col items-center rounded-xl py-3">
+                    <img class="mx-auto"  src="assets/bonus1.png" alt="">
+                    <p>Get Bonus</p>
+                </div>
+                <div class="border-1 w-full flex flex-col items-center rounded-xl py-3">
+                    <img class="mx-auto"  src="assets/purse1.png" alt="">
+                    <p>Pay Bill</p>
+                </div>
+                <div class="border-1 w-full flex flex-col items-center rounded-xl py-3">
+                    <img class="mx-auto"  src="assets/transaction1.png" alt="">
+                    <p>Transactions</p>
+                </div>
+            </div>
+        </section>
+    </header>
+</body>
+
+</html>

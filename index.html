@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Daisy Ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <style type="text/tailwindcss">
+        @theme {
+        --font-outfit: "Outfit", sans-serif;
+        --color-back: #F4F5F7;
+        --color-login: #0874F2;
+      }
+    </style>
+</head>
+
+<body class="bg-black">
+    <header class="bg-back max-w-[450px] h-screen mx-auto grid items-center">
+        <div class="max-w-[456px]">
+            <!-- logo section -->
+            <section class="grid items-end">
+                <div class="relative">
+                    <img class="mx-auto w-80" src="assets/bg.png" alt="">
+                    <img class="absolute w-25 top-5 left-[50%] -translate-x-[50%]" src="assets/Group.png" alt="">
+                </div>
+            </section>
+            <!-- form section -->
+            <div
+                class="card bg-base-100 w-10/12 mx-auto max-w-sm shrink-0 shadow-xs rounded-3xl grid items-start -mt-30">
+                <div class="card-body">
+                    <form id="login-list" class="fieldset">
+                        <label class="label font-outfit font-bold text-xl">Mobile Number</label>
+                        <input id="number" type="text" class="input rounded-full font-bold text-[14px] outline-none"
+                            placeholder="Enter your number" />
+                        <label class="label font-outfit font-bold text-xl">4 Digit Pin</label>
+                        <input id="password" type="password"
+                            class="input rounded-full font-bold text-[14px] outline-none"
+                            placeholder="Enter 4 Digit Pin" />
+                    </form>
+                    <button id="login-btn"
+                        class="btn bg-login text-white mt-4 rounded-full text-xl font-semibold">Login</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="script/script.js"></script>
+</body>
+
+</html>
