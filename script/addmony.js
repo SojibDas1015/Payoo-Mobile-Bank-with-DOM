@@ -18,4 +18,4 @@ document.getElementById('add-money')
             p.style.color = 'red';
             loginList.appendChild(p);
         }
-    })
+    }) 

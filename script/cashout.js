@@ -1,18 +1,16 @@
 document.getElementById('cash-out')
     .addEventListener('click', function (event) {
-        const cashOutAmount = parseInt(document.getElementById('cash-out-amount').value);
-        const cashOutPin = parseInt(document.getElementById('cash-out-pin').value);
+        const cashOutAmount = getInputValue('cash-out-amount');
+        const cashOutPin = getInputValue('cash-out-pin');
         const loginList = document.getElementById('login-list-cash-out');
         const p = document.createElement('p');
-        const balance = parseInt(document.getElementById('balance').innerText);
+        const balance = getInnerTextById('balance');
         const cashOutTotal = balance - cashOutAmount;
-        console.log(cashOutTotal)
         if (cashOutPin === 1234) {
             p.innerText = 'Cash Out Successful';
             p.style.color = 'green';
             loginList.appendChild(p);
-            document.getElementById('balance').innerText = cashOutTotal;
-            
+            getSetInnerTextByIdValue('balance', cashOutTotal)
         }
         else {
             p.innerText = 'Password Incorrect';
